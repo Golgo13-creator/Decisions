@@ -44,5 +44,11 @@
     <Compile Include="Scenario_Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ScenarioGame_Console\ScenarioGame_Console.csproj">
+      <Project>{d0b63916-f6f9-4364-bee2-8c34b90f0ce7}</Project>
+      <Name>ScenarioGame_Console</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

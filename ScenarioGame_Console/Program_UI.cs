@@ -5,7 +5,7 @@ namespace ScenarioGame_Console
 {
     public class Program_UI
     {
-        LevelOne levelOne = new LevelOne();
+        LevelTwo levelTwo = new LevelTwo();
         GameInfo gameInfo = new GameInfo();
         public void Run()
         {
@@ -14,6 +14,8 @@ namespace ScenarioGame_Console
         public void Menu()
         {
             SoundPlayer startUpSound = new SoundPlayer(@"C:\wav_files\startup_sound.wav");
+            SoundPlayer selectionSound = new SoundPlayer(@"C:\wav_files\515736__matrixxx__retro-coin-06.wav");
+            SoundPlayer errorSound = new SoundPlayer(@"C:\wav_files\450616__breviceps__8-bit-error.wav");
             startUpSound.Play();
             bool keepRunning = true;
             while(keepRunning)
@@ -39,17 +41,21 @@ namespace ScenarioGame_Console
                 {
                     case "1":
                         //Start game
-                        levelOne.FirstScenario();
+                        selectionSound.Play();
+                        levelTwo.Opening();
                         break;
                     case "2":
                         //game info
+                        selectionSound.Play();
                         gameInfo.GameInformation();
                         break;
                     case "3":
                         //Exit
+                        selectionSound.Play();
                         keepRunning = false;
                         break;
                     default:
+                        errorSound.Play();
                         Console.WriteLine("Please enter a valid number");
                         Console.ReadKey();
                         break;

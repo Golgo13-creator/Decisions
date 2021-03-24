@@ -3,66 +3,64 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Media;
 
 namespace ScenarioGame_Console
 {
-    public class LevelOne
-    {
-        LevelTwo levelTwo = new LevelTwo();
+    //public class LevelOne
+    //{
+    //    readonly LevelTwo levelTwo = new LevelTwo();
         
-        public void FirstScenario()
-        {
-            Console.Clear();
-            Console.WriteLine("Fenton is the driver of a train, whose brakes have failed.\n" +
-                " On the track ahead are five people, but the track also has a turn going to the left.\n " +
-                " Fenton can turn the train to the left but unfortunately there is one person on this track.\n  " +
-                "What should Fenton do?\n");
-            Console.WriteLine("1. Turn left and kill five people");
-            Console.WriteLine("2. Turn right and kill one person");
-            //while loop possibly
-            string input = Console.ReadLine();
+    //    public void Opening()
+    //    {
+    //        Console.Clear();
+    //        Console.WriteLine("You wake up in a dark room. What do you do?\n");
+    //        Console.WriteLine("1. Turn on a light");
+    //        Console.WriteLine("2. Walk around in the dark");
+    //        //while loop possibly
+    //        string input = Console.ReadLine();
             
-            switch (input)
-            {
-                case "1":
-                    //scenario 1
-                    levelTwo.SecondScenario();
-                    break;
-                case "2":
-                    //scenario 2
-                    levelTwo.ThirdScenario();
-                    break;
-                default:
-                    Console.WriteLine("Please select one or two");
-                    break;
-            }
-            Console.ReadLine();
-        }
-    }
+    //        switch (input)
+    //        {
+    //            case "1":
+    //                //track 1.
+    //                levelTwo.TurnOnALight();
+    //                break;
+    //            case "2":
+    //                //track 2 
+    //                levelTwo.WalkAroundInTheDark();
+    //                break;
+    //            default:
+    //                Console.WriteLine("Please select one or two");
+    //                break;
+    //        }
+    //        Console.ReadLine();
+    //    }
+    //}
     public class LevelTwo
     {
-        LevelThree levelThree = new LevelThree();
-
-        public void SecondScenario()
+        //readonly LevelOne levelOne = new LevelOne();
+        //LevelThree levelThree = new LevelThree();
+       // SoundPlayer gamePlaySound = new SoundPlayer(@);
+        
+        public void Opening()
         {
             Console.Clear();
-            Console.WriteLine("Olli is a transplant surgeon. One of his patients needs a new heart but has a very rare blood type.\n" +
-                " It just so happens Olli has a healthy specimen with that very blood type.\n" +
-                " Olli can take the healthy specimen's heart killing him, and give it to his patient,\n" +
-                " or Olli can let his patient die. What should Olli do?\n");
-            Console.WriteLine("1. Take the healthy specimen's heart");
-            Console.WriteLine("2. Let his patient die.");
+            Console.WriteLine("You wake up in a dark room. What do you do?\n");
+            Console.WriteLine("1. Turn on a light");
+            Console.WriteLine("2. Walk around in the dark");
+            //while loop possibly
             string input = Console.ReadLine();
 
             switch (input)
             {
                 case "1":
-                    //scenario 1
-                    levelThree.FourthScenario();
+                    //track 1.
+                    TurnOnALight();
                     break;
                 case "2":
-                    //scenario 2
-                    ThirdScenario();
+                    //track 2 
+                    WalkAroundInTheDark();
                     break;
                 default:
                     Console.WriteLine("Please select one or two");
@@ -70,17 +68,85 @@ namespace ScenarioGame_Console
             }
             Console.ReadLine();
         }
-        public void ThirdScenario()
+        public void TurnOnALight()
         {
-            Program_UI program_UI = new Program_UI();
             Console.Clear();
-            Console.WriteLine("Skye is president, and has just been informed that the Russians have launched an atomic bomb towards New York.\n" +
-                " The only way which the bomb can be prevented from hitting New York is by deflecting it;\n" +
-                " but the only deflection path available will cause the bomb to hit Worcester.\n" +
-                " What does Skye do, Let the bomb hit New York killing everyone in it?\n" +
-                " Or Let the bomb hit Worcester killing everyone in it?\n");
-            Console.WriteLine("1. Let the bomb hit New York");
-            Console.WriteLine("2. Let the bomb hit Worcester.");
+            Console.WriteLine("You find a key\n");
+            Console.WriteLine("1. Look for a door");
+            Console.WriteLine("2. Put the key in safe place");
+            string input = Console.ReadLine();
+
+            switch (input)
+            {
+                case "1":
+                    //track 1.1
+                    LookForADoor();
+                    break;
+                case "2":
+                    //scenario 2
+          
+                    break;
+                default:
+                    Console.WriteLine("Please select one or two");
+                    break;
+            }
+            Console.ReadLine();
+        }
+        public void LookForADoor()
+        {
+            Console.Clear();
+            Console.WriteLine("You find a massive door\n");
+            Console.WriteLine("1. Use key on the door");
+            Console.WriteLine("2. Knock on the door");
+            string input = Console.ReadLine();
+
+            switch (input)
+            {
+                case "1":
+                    //track 1.2
+                    UseKeyOnTheDoor();
+                    break;
+                case "2":
+                    //scenario 2
+                    
+                    break;
+                default:
+                    Console.WriteLine("Please select one or two");
+                    break;
+            }
+            Console.ReadLine();
+        }
+        public void UseKeyOnTheDoor()
+        { 
+            Console.Clear();
+            Console.WriteLine("You enter a pitch black room\n");
+            Console.WriteLine("1. ");
+            Console.WriteLine("2. ");
+            string input = Console.ReadLine();
+
+            switch (input)
+            {
+                case "1":
+                    //track 1
+                    
+                    break;
+                case "2":
+                    //track 2
+                    
+                    break;
+                default:
+                    Console.WriteLine("Please select one or two");
+                    break;
+            }
+            Console.ReadLine();
+        }
+        public void WalkAroundInTheDark()
+        {
+           // Program_UI program_UI = new Program_UI();
+            Console.Clear();
+            Console.WriteLine("You stub your toe\n");
+            Console.WriteLine("1.Double over in pain looking for a light switch");
+            Console.WriteLine("2. Push through the pain and continue looking around in the dark");
             //while loop possibly
             string input = Console.ReadLine();
 
@@ -88,11 +154,11 @@ namespace ScenarioGame_Console
             {
                 case "1":
                     //scenario 1
-                    Console.WriteLine("The bomb hit New York.");
+                    TurnOnALight();
                     break;
                 case "2":
                     //scenario 2
-                    Console.WriteLine("The bomb hit Worcester.");
+                    PushThrough();
                     break;
                 default:
                     Console.WriteLine("Please select one or two");
@@ -100,38 +166,59 @@ namespace ScenarioGame_Console
             }
             Console.ReadLine();
             Console.WriteLine("Press any key to return to menu");
-            program_UI.Menu();
+            //program_UI.Menu();
         }
-    }
-    public class LevelThree
-    {
-        public void FourthScenario()
+        
+        public void PushThrough()
         {
-            Program_UI program_UI = new Program_UI();
             Console.Clear();
-            Console.WriteLine("You go out with your husband for dinner at a new restaurant you have not frequented before.\n It is in a part of town you rarely visit.\n You are shocked to see your friend’s spouse having dinner with a very young, attractive person.\n From the way they are behaving, it is obvious they are more than friends.\n The couple finish their meal and leave without seeing you.\n They behave very affectionately on the way out the door.\n Do you tell your friend knowing you probably wont be believed or\n do you say nothing and mind your own business?\n");
-            Console.WriteLine("1. Tell your friend.");
-            Console.WriteLine("2. Say nothing.");
-            //while loop possibly
+            Console.WriteLine("You fall over\n");
+            Console.WriteLine("Press any key to continue\n");
+            Console.ReadKey();
+            Console.WriteLine("You bonk your head and pass out\n");
+            Console.WriteLine("Press any key to continue");
             string input = Console.ReadLine();
 
             switch (input)
             {
                 case "1":
-                    //scenario 1
-                    Console.WriteLine("Test");
-                    break;
-                case "2":
-                    //scenario 2
-                    Console.WriteLine("Test");
+                    Opening();
                     break;
                 default:
-                    Console.WriteLine("Please select one or two");
+                    Opening();
                     break;
             }
-            Console.ReadLine();
-            program_UI.Menu();
         }
     }
+    //public class LevelThree
+    //{
+    //    public void FourthScenario()
+    //    {
+    //        Program_UI program_UI = new Program_UI();
+    //        Console.Clear();
+    //        Console.WriteLine("You go out with your husband for dinner at a new restaurant you have not frequented before.\n It is in a part of town you rarely visit.\n You are shocked to see your friend’s spouse having dinner with a very young, attractive person.\n From the way they are behaving, it is obvious they are more than friends.\n The couple finish their meal and leave without seeing you.\n They behave very affectionately on the way out the door.\n Do you tell your friend knowing you probably wont be believed or\n do you say nothing and mind your own business?\n");
+    //        Console.WriteLine("1. Tell your friend.");
+    //        Console.WriteLine("2. Say nothing.");
+    //        //while loop possibly
+    //        string input = Console.ReadLine();
+
+    //        switch (input)
+    //        {
+    //            case "1":
+    //                //scenario 1
+    //                Console.WriteLine("Test");
+    //                break;
+    //            case "2":
+    //                //scenario 2
+    //                Console.WriteLine("Test");
+    //                break;
+    //            default:
+    //                Console.WriteLine("Please select one or two");
+    //                break;
+    //        }
+    //        Console.ReadLine();
+    //        program_UI.Menu();
+    //    }
+    //}
 
 }
