@@ -1,0 +1,7 @@
+C:\Users\laama\source\repos\PairProgramming\ScenarioGame_Console\bin\Debug\ScenarioGame_Console.exe.config
+C:\Users\laama\source\repos\PairProgramming\ScenarioGame_Console\bin\Debug\ScenarioGame_Console.exe
+C:\Users\laama\source\repos\PairProgramming\ScenarioGame_Console\bin\Debug\ScenarioGame_Console.pdb
+C:\Users\laama\source\repos\PairProgramming\ScenarioGame_Console\obj\Debug\ScenarioGame_Console.csprojAssemblyReference.cache
+C:\Users\laama\source\repos\PairProgramming\ScenarioGame_Console\obj\Debug\ScenarioGame_Console.csproj.CoreCompileInputs.cache
+C:\Users\laama\source\repos\PairProgramming\ScenarioGame_Console\obj\Debug\ScenarioGame_Console.exe
+C:\Users\laama\source\repos\PairProgramming\ScenarioGame_Console\obj\Debug\ScenarioGame_Console.pdb
