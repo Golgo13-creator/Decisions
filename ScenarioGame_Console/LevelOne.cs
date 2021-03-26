@@ -12,6 +12,8 @@ namespace ScenarioGame_Console
 {
     public class LevelTwo
     {
+        GameInfo gameInfo = new GameInfo();
+
         SoundPlayer gamePlaySound = new SoundPlayer(@"C:\wav_files\GameMusic_NES_Zelda.wav");
         SoundPlayer potato = new SoundPlayer(@"C:\wav_files\Im_a_Potato.wav");
         SoundPlayer rememberThatTime = new SoundPlayer(@"C:\wav_files\Remember_that_time.wav");
@@ -29,22 +31,21 @@ namespace ScenarioGame_Console
             Console.WriteLine("2. Walk around in the dark");
             //while loop possibly
             string input = Console.ReadLine();
-
             switch (input)
             {
                 case "1":
-                    //track 1.
                     TurnOnALight();
                     break;
                 case "2":
-                    //track 2 
                     WalkAroundInTheDark();
                     break;
                 default:
                     Console.WriteLine("Please select one or two");
+                    Thread.Sleep(4000);
+                    Opening();
                     break;
             }
-            Console.ReadLine();
+            Console.ReadLine();      
         }
         public void TurnOnALight()
         {
@@ -73,7 +74,7 @@ namespace ScenarioGame_Console
 
             Console.Clear();
             Console.WriteLine(light);
-            Console.WriteLine("\n\nYou find a key\n\n");
+            Console.WriteLine("\nYou find a key\n\n");
             Console.WriteLine("1. Look for a door");
             Console.WriteLine("2. Put the key in safe place");
             string input = Console.ReadLine();
@@ -90,6 +91,8 @@ namespace ScenarioGame_Console
                     break;
                 default:
                     Console.WriteLine("Please select one or two");
+                    Thread.Sleep(4000);
+                    TurnOnALight();
                     break;
             }
             Console.ReadLine();
@@ -110,7 +113,7 @@ _-' ___________ '-_
  |___|||||||||___|
 ";
             Console.WriteLine(door);
-            Console.WriteLine("\n\nYou find a massive door\n\n");
+            Console.WriteLine("\nYou find a massive door\n\n");
             Console.WriteLine("1. Use key on the door");
             Console.WriteLine("2. Knock on the door");
             string input = Console.ReadLine();
@@ -130,6 +133,8 @@ _-' ___________ '-_
                     break;
                 default:
                     Console.WriteLine("Please select one or two");
+                    Thread.Sleep(4000);
+                    LookForADoorAfterHidingKey();
                     break;
             }
             Console.ReadLine();
@@ -167,6 +172,8 @@ _-' ___________ '-_
                     break;
                 default:
                     Console.WriteLine("Please select one or two");
+                    Thread.Sleep(4000);
+                    LookForADoor();
                     break;
             }
             Console.ReadLine();
@@ -191,6 +198,8 @@ _-' ___________ '-_
                     break;
                 default:
                     Console.WriteLine("Please select one or two");
+                    Thread.Sleep(4000);
+                    UseKeyOnTheDoor();
                     break;
             }
             Console.ReadLine();
@@ -215,6 +224,8 @@ _-' ___________ '-_
                     break;
                 default:
                     Console.WriteLine("Please select one or two");
+                    Thread.Sleep(4000);
+                    KnockOnTheDoor();
                     break;
             }
             Console.ReadLine();
@@ -251,7 +262,7 @@ _-' ___________ '-_
   \______]  (___)]
 ";
             Console.WriteLine(it);
-            Console.WriteLine("\n\nCousin Itt answers the door\n\n");
+            Console.WriteLine("\nCousin Itt answers the door\n");
             Console.WriteLine("You're very confused\n\n");
             Console.WriteLine("1. Properly greet Cousin Itt");
             Console.WriteLine("2. Stare at Cousin Itt in confusion");
@@ -269,6 +280,8 @@ _-' ___________ '-_
                     break;
                 default:
                     Console.WriteLine("Please select one or two");
+                    Thread.Sleep(4000);
+                    AnswerTheDoor();
                     break;
             }
             Console.ReadLine();
@@ -298,6 +311,8 @@ _-' ___________ '-_
                     break;
                 default:
                     Console.WriteLine("Please select one or two");
+                    Thread.Sleep(4000);
+                    StareConfused();
                     break;
             }
             Console.ReadLine();
@@ -314,7 +329,36 @@ _-' ___________ '-_
         public void TurnOnAnotherLight()
         {
             Console.Clear();
-            Console.WriteLine("You see an angry Cousin Itt\n\n\n");
+            string it = @"
+            /)   /)
+           /)   /)
+          ( )__( )
+          ,=`  `=.
+         _() ()  \\
+        (_`-      )\
+         {{  }}  / )
+        _}/__\{_/ /
+       xxx     oooo\/\
+      xxxx     oooo/  \_
+     /xxxx     oooo\  | \
+    / xxxx     oooo |    \ 
+    | xxxx     oooo |    |
+    \  xxx     oooo/   o /
+     | mmmmmmmmmmmm| |  /
+ |\_/              \_/>/ __
+ \___/|     ___     / /_/ /
+      |      |     |     /
+      |______|_____|\___/
+       |   |  |   |
+       |   |  |   |
+       ( ) {  ( ) |
+       |   \  |   \
+       |   /  |   /
+  ,=.__|_ /  .=._|
+  \______]  (___)]
+";
+            Console.WriteLine(it);
+            Console.WriteLine("\nYou see an angry Cousin Itt\n\n");
             Thread.Sleep(2000);
             Console.WriteLine("Cousin Itt grabs you and starts walking towards a window\n\n");
             Console.WriteLine("1. Struggle");
@@ -333,6 +377,8 @@ _-' ___________ '-_
                     break;
                 default:
                     Console.WriteLine("Please select one or two");
+                    Thread.Sleep(4000);
+                    TurnOnAnotherLight();
                     break;
             }
             Console.ReadLine();
@@ -340,17 +386,17 @@ _-' ___________ '-_
         public void Struggle()
         {
             Console.Clear();
-            Console.WriteLine("Cousin Itt decides he doesn't have the time to deal with you\n and tosses you out of the window\n" +
+            Console.WriteLine("\n\nCousin Itt decides he doesn't have the time to deal with you\n and tosses you out of the window\n" +
                 "You are finally outside, but confused");
             Thread.Sleep(5000);
-            Console.WriteLine("\n\n\nPress enter");
+            Console.WriteLine("\n\nPress enter");
             Console.ReadKey();
             Credits();
         }
         public void AcceptIt()
         {
             Console.Clear();
-            Console.WriteLine("Cousin Itt decides to be generous and brings you to the front door to kindly let you out.\n" +
+            Console.WriteLine("\n\nCousin Itt decides to be generous and brings you to the front door to kindly let you out.\n" +
                 "You don't know why you woke up there but the family didn't seem to mind\n");
             Thread.Sleep(5000);
             //Console.ReadKey();
@@ -365,8 +411,8 @@ _-' ___________ '-_
         {
             // Program_UI program_UI = new Program_UI();
             Console.Clear();
-            Console.WriteLine("You stub your toe\n");
-            Console.WriteLine("1.Double over in pain looking for a light switch");
+            Console.WriteLine("\n\nYou stub your toe\n\n");
+            Console.WriteLine("1. Double over in pain looking for a light switch");
             Console.WriteLine("2. Push through the pain and continue looking around in the dark");
             string input = Console.ReadLine();
 
@@ -382,6 +428,8 @@ _-' ___________ '-_
                     break;
                 default:
                     Console.WriteLine("Please select one or two");
+                    Thread.Sleep(4000);
+                    WalkAroundInTheDark();
                     break;
             }
             Console.ReadLine();
@@ -396,7 +444,7 @@ _-' ___________ '-_
             Console.WriteLine("Press any key to continue\n");
             Console.ReadKey();
             Console.Clear();
-            Console.WriteLine("You bonk your head and pass out\n");
+            Console.WriteLine("\n\nYou bonk your head and pass out\n\n");
             Console.WriteLine("Press any key to continue");
             string input = Console.ReadLine();
 
@@ -570,10 +618,6 @@ _-' ___________ '-_
             Thread.Sleep(10000);
             Credits();
         }
-        public void Light()
-        {
-            
-        }
         public void Credits()
         {
             Console.Clear();
@@ -604,7 +648,65 @@ _:_:_:_:_:_:[]:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:[]:_:_:_:_:_:_
             Console.WriteLine(closing);
             Console.WriteLine("Until next time");
             Thread.Sleep(10000);
-            Environment.Exit(0);
+            Menu();
+            //Environment.Exit(0);
+        }
+        public void Menu()
+        {
+            SoundPlayer selectionSound = new SoundPlayer(@"C:\wav_files\515736__matrixxx__retro-coin-06.wav");
+            SoundPlayer errorSound = new SoundPlayer(@"C:\wav_files\450616__breviceps__8-bit-error.wav");
+            SoundPlayer menuSound = new SoundPlayer(@"C:\wav_files\MenuMusic_SongofStorms.wav");
+
+            //easter egg sound
+            //selection sounds within game
+            bool keepRunning = true;
+            while (keepRunning)
+            {
+                Console.Clear();
+                string title = @"
+  _____            _     _                 
+ |  __ \          (_)   (_)                
+ | |  | | ___  ___ _ ___ _  ___  _ __  ___ 
+ | |  | |/ _ \/ __| / __| |/ _ \| '_ \/ __|
+ | |__| |  __/ (__| \__ \ | (_) | | | \__ \
+ |_____/ \___|\___|_|___/_|\___/|_| |_|___/
+                                           ";
+
+                Console.WriteLine(title);
+                Console.WriteLine("\n\nStart Menu\n" +
+                      "\n\nSelect from the list of options\n" +
+                      "1. Start Game\n" +
+                      "2. Game Info\n" +
+                      "3. Exit\n");
+                menuSound.PlayLooping();
+                string input = Console.ReadLine();
+                switch (input)
+                {
+                    case "1":
+                        //Start game
+                        selectionSound.Play();
+                        Opening();
+                        menuSound.Stop();
+                        break;
+                    case "2":
+                        //game info
+                        gameInfo.GameInformation();
+                        break;
+                    case "3":
+                        //Exit
+                        selectionSound.Play();
+                        //keepRunning = false;
+                        Environment.Exit(0);
+                        break;
+                    default:
+                        errorSound.Play();
+                        Console.WriteLine("Please enter a valid number");
+                        Thread.Sleep(3000);
+                        Menu();
+                        break;
+                }
+                Console.Clear();
+            }
         }
     }
 }
